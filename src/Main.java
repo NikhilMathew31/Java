@@ -12,28 +12,45 @@ class Circle {
     }
 }
 
+class Age {
+    int age;
+    public void cal() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        age = sc.nextInt();
+        if( age >= 18 ) {
+            System.out.println("Eligible to vote.");
+        }
+        else {
+            System.out.println("Not eligible to vote.");
+        }
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         Date now = new Date();
         System.out.println("Today: " + now);
 
-        int[] arr = { 1, 2, 3, 4, 5 };
-        System.out.println("Length of array: " + arr.length);
-        for(int i=0; i<arr.length; i++) {
-            System.out.println(arr[i]);
+        int[] a = { 1, 2, 3, 4, 5 };
+        System.out.println("Length of array: " + a.length);
+        for(int i=0; i<a.length; i++) {
+            System.out.println(a[i]);
         }
 
-        int[][] a = {{1,2},{3,4}};
+        int[][] b = {{1,2},{3,4}};
         System.out.println("TwoD array: ");
         for(int i=0; i<2; i++) {
             for(int j=0; j<2; j++) {
-                System.out.print(a[i][j] + "\t");
+                System.out.print(b[i][j] + "\t");
             }
             System.out.println();
         }
 
-        Circle c = new Circle();
-        c.get();
+        Circle circle = new Circle();
+        circle.get();
 
+        Age age = new Age();
+        age.cal();
     }
 }
