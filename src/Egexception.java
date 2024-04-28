@@ -1,5 +1,16 @@
 public class Egexception {
 
+        static void avg() {
+            try {
+                throw new ArithmeticException("Hello");
+            }
+            catch(ArithmeticException e) {
+                System.out.println("Exception caught");
+            }
+            finally {
+                System.out.println("Finally block");
+            }
+        }
         public static void main(String[] args) {
 
             try {
@@ -27,6 +38,7 @@ public class Egexception {
                 System.out.println("Array Index out of bound");
             }
 
+            avg();
         }
 }
 
