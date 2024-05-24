@@ -1,3 +1,7 @@
+import collections.CollectionsDemo;
+import generics.GenericList;
+
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Date;
 
@@ -77,5 +81,14 @@ public class Main {
 
         Palindrome pal = new Palindrome();
         pal.cal();
+
+        var list = new GenericList<String>();
+        list.add("a");
+        list.add("b");
+        for (var  item : list) {
+            System.out.println(item);
+        }
+
+        CollectionsDemo.show();
     }
 }
